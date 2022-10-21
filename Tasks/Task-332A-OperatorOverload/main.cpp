@@ -86,7 +86,13 @@ public:
     {
         // Return a true if u is equal to `this`
         // ** TO BE DONE BY THE STUDENT **
-        return false;
+        double temp = u.getValue();
+        if (temp == this -> _real){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     operator double() {
@@ -103,12 +109,19 @@ int main()
     DoubleNumber n1;
     DoubleNumber n2;
     DoubleNumber n3;
+    DoubleNumber n4;
+    DoubleNumber n5;
 
     //setValue function overloading  
     n1 = 10.0;
     n1 += 1.0;      // Equivalent to n1.operator+=(1.0);
     n2 = "-3.0";
     n3 = n2;
+    n4.setValue(1);
+    n5.setValue(1);
+    bool result = n4.operator==(n5);
+
+    cout << "Test" << result << endl;
 
     DoubleNumber sum = (n0 + n1 + n2 + n3);
     cout << sum << endl;
